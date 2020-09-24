@@ -1,0 +1,17 @@
+#google_service_account
+resource "google_service_account" "service_account" {
+  account_id   = "service_account_id"
+  display_name = "Service Account"
+}
+
+# khai báo biến
+# ex.tf
+provider "aws" {
+profile		= "default"
+region		= var.region
+}
+# variables.tf
+variable "region" {
+	default = "us-east-1"
+}
+dùng terraform apply mặc định sẻ lấy default, nếu muốn thay đổi thì terraform apply -var="region=us-east-2"
