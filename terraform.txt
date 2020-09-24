@@ -15,3 +15,6 @@ variable "region" {
 	default = "us-east-1"
 }
 dùng terraform apply mặc định sẻ lấy default, nếu muốn thay đổi thì terraform apply -var="region=us-east-2"
+# terraform.tfvars
+region="us-east-2"
+nếu dùng file tên khác thì terraform apply  -var-file="tenfile.tfvars"
